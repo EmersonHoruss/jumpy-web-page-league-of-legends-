@@ -1,0 +1,400 @@
+/* VARIABLES TO THE PROJECT */
+:root {
+  /* --first-color: rgb(85, 123, 180); */
+  /* --first-color: rgb(99, 0, 91); */
+  --first-color: rgba(29, 43, 124, 0.863);
+  --second-color: rgb(61, 63, 100);
+  /* --third-color: rgb(139, 216, 252); */
+  --third-color: rgb(120, 195, 204);
+  --fourth-color: rgb(232, 118, 118);
+
+  --third-color-hover: rgb(218, 219, 231);
+}
+
+/* RESET THE HTML */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* COMPUTER LAYOUT */
+
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh 100vh 100vh 100vh 10vh;
+  grid-template-areas:
+    "header"
+    "about-league-legends"
+    "about-lordd-horuss"
+    "lordd-horuss-liked-champs"
+    "footer";
+  font-family: "Lora", serif;
+}
+
+header {
+  grid-area: header;
+}
+
+.about-league-legends {
+  padding-top: 4rem;
+  grid-area: about-league-legends;
+}
+
+.about-lordd-horuss {
+  padding-top: 4rem;
+  grid-area: about-lordd-horuss;
+}
+
+.lordd-horuss-liked-champs {
+  padding-top: 4rem;
+  grid-area: lordd-horuss-liked-champs;
+}
+
+footer {
+  background-color: black;
+  grid-area: footer;
+}
+
+/* HEADER: NAVBAR */
+header nav {
+  height: 4rem;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  background-color: var(--first-color);
+  align-items: center;
+  position: fixed;
+}
+
+header nav a {
+  margin: 0 1rem 0;
+  color: var(--third-color);
+}
+
+header nav .icon {
+  margin: 0 4rem 0 3rem;
+}
+
+/* HEADER: MAIN CAROUSEL */
+header .main-carousel {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/main-carousel/secondSet/league-legends.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* calc(100% - 4rem) */
+  /* background-attachment: fixed; */
+  background-position: 0 4rem;
+  /* filter: opacity(%);  */
+  /* transition: ease; */
+}
+
+header .main-carousel span {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* HEADER:  ACCES MAIN CARROUSEL*/
+.access-main-carousel {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: calc(50%);
+}
+
+.access-main-carousel svg {
+  cursor: pointer;
+  filter: opacity(70%);
+}
+
+.access-main-carousel svg:hover {
+  filter: opacity(100%);
+}
+
+.access-main-carousel .go-button {
+  margin-right: 1.5rem;
+}
+
+.access-main-carousel .back-button {
+  margin-left: 1.5rem;
+}
+
+/* LEAGUE-LEGEND: COMPUTER LAYOUT*/
+.about-league-legends {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 15vh auto;
+  grid-template-areas:
+    "title title"
+    "written visual";
+}
+
+.about-league-legends .title {
+  grid-area: title;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.about-league-legends .written-information {
+  grid-area: written;
+
+  margin: 1rem 10% 1rem 20%;
+}
+
+.about-league-legends h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.about-league-legends .written-information section article {
+  text-align: justify;
+}
+
+.about-league-legends .written-information .how-is-it-played {
+  margin-top: 18%;
+}
+
+.about-league-legends .visual-information {
+  grid-area: visual;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 20% 1rem 10%;
+}
+
+.about-league-legends .visual-information section {
+  width: 75%;
+  height: 35%;
+}
+
+.about-league-legends .visual-information h3 {
+  text-align: right;
+}
+
+.about-league-legends .visual-information .what-is-video {
+  margin-left: calc(100% - 75%);
+  margin-bottom: 10%;
+  background-color: blue;
+}
+
+.about-league-legends .visual-information .how-to-play-video {
+  background-color: red;
+}
+
+/* LORDDHORUSS: COMPUTER LAYOUT*/
+.about-lordd-horuss {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 15vh auto;
+  grid-template-areas:
+    "title title"
+    "profile whois";
+}
+
+.about-lordd-horuss .title {
+  grid-area: title;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.about-lordd-horuss .profile {
+  grid-area: profile;
+  margin: 1rem 10% 1rem 20%;
+  /* background-color: red; */
+  /* text-align: cente; */
+}
+
+.about-lordd-horuss .profile img {
+  width: 100%;
+  height: 60%;
+}
+
+.about-lordd-horuss .details {
+  grid-area: whois;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 20% 1rem 10%;
+}
+
+.about-lordd-horuss h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.about-lordd-horuss .details h3 {
+  text-align: right;
+}
+
+.about-lordd-horuss .details .why {
+  margin-top: 18%;
+}
+
+.about-lordd-horuss article {
+  text-align: justify;
+}
+
+/* LIKED CHAMPS: LAYOUT */
+.lordd-horuss-liked-champs {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 15vh auto;
+  grid-template-areas:
+    "title title"
+    "lines champs";
+
+  margin: 0 10%;
+}
+
+.lordd-horuss-liked-champs .title {
+  grid-area: title;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.lordd-horuss-liked-champs .lines {
+  grid-area: lines;
+  margin: 1rem 0 1rem 0;
+  /* background-color: red; */
+  /* text-align: cente; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lordd-horuss-liked-champs .champs {
+  grid-area: champs;
+  /* background-color: yellow; */
+  display: flex;
+  /* flex-direction: column; */
+  margin: 1rem 0% 1rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+/* LIKED CHAMPS: LINES */
+.lordd-horuss-liked-champs .lines ul {
+  background-color: var(--first-color);
+}
+
+.lordd-horuss-liked-champs .lines ul li {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--third-color);
+  padding: 0.5rem 0 0.5rem 1rem;
+  cursor: pointer;
+  /* border-bottom: 2px solid var(--first-color); */
+  /* border-top: 2px solid var(--first-color); */
+}
+
+.lordd-horuss-liked-champs .lines ul li:hover {
+  border-bottom: 2px solid var(--third-color);
+  border-top: 2px solid var(--third-color);
+  /* position: relative; */
+}
+
+.lordd-horuss-liked-champs .lines ul li span {
+  margin-left: 1rem;
+}
+
+.lordd-horuss-liked-champs .lines ul li:first-child {
+  cursor: default;
+  border: none;
+}
+
+.lordd-horuss-liked-champs .lines img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* LIKED CHAMPS: CHAMPS */
+.lordd-horuss-liked-champs .champs .champ {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.lordd-horuss-liked-champs .champs .champ .name {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--first-color);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--second-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--third-color);
+}
+
+/* UP ARROW */
+.up-arrow{
+  position: fixed;
+  bottom: 5rem;
+  right: 3rem;
+}
+
+.up-arrow svg path{
+  fill: var(--second-color);
+}
+/* 
+.lordd-horuss-liked-champs .champs .champ:last-child img{
+  margin-right: 0;
+} */
+
+/* EXTRA FUNCTIONALITY */
+.invisible {
+  background-attachment: fixed;
+}
+
+
+.logo{
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--third-color);
+}
+
+.image img{
+  width: 300px;
+  height: calc(250px - 2rem);
+  object-fit: contain;
+}

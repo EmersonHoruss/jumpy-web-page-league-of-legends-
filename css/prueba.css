@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.section{
+    width: 100%;
+    background-color: red;
+    height: 100vh;
+    filter: opacity(80%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh auto;
+    grid-template-areas: "title title" "written visual";
+}
+
+.title{
+    filter: opacity(80%);
+    background-color: blue;
+    text-align: center;
+    color: black;
+    grid-area: title;
+}
+
+.written{
+    filter: opacity(80%);
+    background-color: yellow;
+    grid-area: written;
+}
+
+.visual{
+    filter: opacity(80%);
+    background-color: white;
+    grid-area: visual;
+}
+
+.center{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 100px;
+    margin-bottom: 10rem;
+    background-color: red;
+    border: 10px solid red;
+}
